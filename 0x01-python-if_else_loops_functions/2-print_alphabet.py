@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 char = 97
 while char <= ord('z'):
-    print(f"{chr(char)}", end="")
+    print("{}".format(chr(char)), end="")
     char += 1
