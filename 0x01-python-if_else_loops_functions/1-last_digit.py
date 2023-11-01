@@ -5,6 +5,7 @@ if number < 0:
 	number *= -1
 	last_digit = number % 10
 	last_digit *= -1
+	number *= -1
 else:
 	last_digit = number % 10
 print(f"Last digit of {number} is {last_digit} and is", end = " ")
