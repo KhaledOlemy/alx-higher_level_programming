@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
     if str == "":
-        print("\n",end="")
+        print("\n", end="")
     for letter in range(len(str)):
         end = ""
         if letter == len(str) - 1:
