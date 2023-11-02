@@ -8,4 +8,4 @@ while char != 65:
         char += minus
     else:
         char += plus
-    print(chr(char), end="")
+    print("".format(chr(char)), end="")
