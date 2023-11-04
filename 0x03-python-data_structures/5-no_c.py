@@ -2,7 +2,7 @@
 def no_c(my_string):
     out = []
     if not my_string:
-        return None
+        return my_string
     for letter in my_string:
         if letter != "c" and letter != "C":
             out.append(letter)
