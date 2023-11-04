@@ -44,6 +44,10 @@ int is_palindrome(listint_t **head)
 			return (0);
 		}
 	}
+	if (!end)
+	{
+		return (1);
+	}
 	return (0);
 }
 
