@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 def if_not_ret_zero(tuple_i=(), idx=0):
-    try:
-        out = tuple_i[idx]
-    except:
-        out = 0
-    return out
+    if idx < 0 or idx > len(tuple_i) - 1:
+        return 0
+    return tuple_i[idx]
 
 
 def add_tuple(tuple_a=(), tuple_b=()):
