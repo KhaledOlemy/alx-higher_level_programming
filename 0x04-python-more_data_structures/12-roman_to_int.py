@@ -11,7 +11,6 @@ def roman_to_int(roman_string):
     out = 0
     rem = 0
     for i in range(len(string)):
-
         if i + 1 < len(string) and convert[string[i + 1]] == convert[string[i]]:
             rem += convert[string[i]]
         elif i + 1 < len(string) and convert[string[i + 1]] > convert[string[i]]:
