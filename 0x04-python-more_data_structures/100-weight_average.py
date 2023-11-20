@@ -6,4 +6,3 @@ def weight_average(my_list=[]):
         summie += tup[0] * tup[1]
         weight += tup[1]
     return summie / weight
-
