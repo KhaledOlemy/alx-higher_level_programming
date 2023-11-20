@@ -6,12 +6,11 @@ def roman_to_int(roman_string):
     rem = 0
     for i in range(len(string)):
 
-        if i + 1 < len(string) and convert[string[i+1]] == convert[string[i]]:
+        if i + 1 < len(string) and convert[string[i + 1]] == convert[string[i]]:
             rem += convert[string[i]]
-        elif i + 1 < len(string) and convert[string[i+1]] > convert[string[i]]:
-            rem = - rem - convert[string[i]]
+        elif i + 1 < len(string) and convert[string[i + 1]] > convert[string[i]]:
+            rem = 0 - rem - convert[string[i]]
         else:
             out = out + convert[string[i]] + rem
             rem = 0
     return out
-
