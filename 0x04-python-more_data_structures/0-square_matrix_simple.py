@@ -1,4 +1,7 @@
 #!/usr/bin/pyton3
 def square_matrix_simple(matrix=[]):
-    mat = [list(map(lambda x: x**2, item)) for item in matrix]
-    return mat
+    out_mat = []
+    for item in matrix:
+        mat = list(map(lambda x: x**2, item))
+        out_mat.append(mat)
+    return out_mat
