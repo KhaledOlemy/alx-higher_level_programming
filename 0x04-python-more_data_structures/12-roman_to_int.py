@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    try:
-        roman_string.strip()
-    except:
+    if not isinstance(roman_string, str):
         return 0
     if not roman_string:
         return 0
@@ -11,9 +9,9 @@ def roman_to_int(roman_string):
     out = 0
     rem = 0
     for i in range(len(string)):
-        if i + 1 < len(string) and convert[string[i + 1]] == convert[string[i]]:
+        if i + 1 < len(string) and convert[string[i+1]] == convert[string[i]]:
             rem += convert[string[i]]
-        elif i + 1 < len(string) and convert[string[i + 1]] > convert[string[i]]:
+        elif i + 1 < len(string) and convert[string[i+1]] > convert[string[i]]:
             rem = 0 - rem - convert[string[i]]
         else:
             out = out + convert[string[i]] + rem
