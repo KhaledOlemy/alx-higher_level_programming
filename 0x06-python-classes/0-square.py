@@ -3,5 +3,4 @@
 
 
 class Square:
-    """Defines a Square"""
     pass
