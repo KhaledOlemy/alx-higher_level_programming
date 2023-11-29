@@ -5,9 +5,7 @@
 class Rectangle:
     """ This class Rectangle represents a rectangle"""
     def __init__(self, width=0, height=0):
-        self.checker(width)
         self.__width = width
-        self.checker(height)
         self.__height = height
 
     @property
@@ -16,7 +14,11 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        self.checker(value)
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+
         self.__height = value
 
     @property
@@ -25,11 +27,9 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        self.checker(value)
-        self.__width = value
-
-    def checker(self, val):
-        if not isinstance(val, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if val < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
+
+        self.__width = value
