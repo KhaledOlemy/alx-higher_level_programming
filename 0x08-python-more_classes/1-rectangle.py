@@ -9,25 +9,26 @@ class Rectangle:
         self.height = height
 
     @property
-    def height(self):
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        self.checker(value)
-        self.__height = value
-
-    @property
     def width(self):
         return self.__width
 
     @width.setter
     def width(self, value):
-        self.checker(value)
+        self.checker(value, "width")
         self.__width = value
 
-    def checker(self, value):
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        self.checker(value, "height")
+        self.__height = value
+
+
+    def checker(self, value, w_h):
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError(f"{w_h} must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError(f"{w_h} must be >= 0")
