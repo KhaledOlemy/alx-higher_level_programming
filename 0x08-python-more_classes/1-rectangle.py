@@ -5,7 +5,9 @@
 class Rectangle:
     """ This class Rectangle represents a rectangle"""
     def __init__(self, width=0, height=0):
+        self.checker(width)
         self.__width = width
+        self.checker(height)
         self.__height = height
 
     @property
