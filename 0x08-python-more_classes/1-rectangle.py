@@ -5,32 +5,29 @@
 class Rectangle:
     """ This class Rectangle represents a rectangle"""
     def __init__(self, width=0, height=0):
-        self._Rectangle__width = width
-        self._Rectangle__height = height
-
-    @property
-    def width(self):
-        return self.width
-
-    @width.setter
-    def width(self, value):
-        if self.checker(value) == 0:
-            self._Rectangle__width = value
+        self.__width = width
+        self.__height = height
 
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
-        if self.checker(value) == 0:
-            self._Rectangle__height = value
+        self.checker(value)
+        self.__height = value
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        self.checker(value)
+        self.__width = value
 
     def checker(self, val):
-        if type(val) is not int:
+        if not isinstance(val, int):
             raise TypeError("width must be an integer")
-            return 1
         if val < 0:
             raise ValueError("width must be >= 0")
-            return 1
-        return 0
