@@ -26,7 +26,6 @@ class Rectangle:
         self.checker(value, "height")
         self.__height = value
 
-
     def checker(self, value, w_h):
         if not isinstance(value, int):
             raise TypeError(f"{w_h} must be an integer")
