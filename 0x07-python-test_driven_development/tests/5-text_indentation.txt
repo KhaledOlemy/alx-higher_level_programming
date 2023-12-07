@@ -1,0 +1,132 @@
+>>> text_indentation("abcd.efgh?ijkl:mnop.qrst?uvwx:yz")
+abcd.
+<BLANKLINE>
+efgh?
+<BLANKLINE>
+ijkl:
+<BLANKLINE>
+mnop.
+<BLANKLINE>
+qrst?
+<BLANKLINE>
+uvwx:
+<BLANKLINE>
+yz
+<BLANKLINE>
+>>> text_indentation("abcd.,,,,..yz")
+abcd.
+<BLANKLINE>
+,,,,.
+<BLANKLINE>
+.
+<BLANKLINE>
+yz
+<BLANKLINE>
+>>> text_indentation("abcd.,,,,..yz..")
+abcd.
+<BLANKLINE>
+,,,,.
+<BLANKLINE>
+.
+<BLANKLINE>
+yz.
+<BLANKLINE>
+.
+<BLANKLINE>
+>>> text_indentation("abcd.,,,,..yz...")
+abcd.
+<BLANKLINE>
+,,,,.
+<BLANKLINE>
+.
+<BLANKLINE>
+yz.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+>>> text_indentation("....???aasdsda???")
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+aasdsda?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+>>> text_indentation("....???aasdsda???\n")
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+aasdsda?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+>>> text_indentation("....???aasd\nsda???\n")
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+aasd
+sda?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+>>> text_indentation([])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in text_indentation
+TypeError: text must be a string
+>>> text_indentation(["asda"])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in text_indentation
+TypeError: text must be a string
+>>> text_indentation(["asda2211"])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in text_indentation
+TypeError: text must be a string
+>>> text_indentation(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in text_indentation
+TypeError: text must be a string
