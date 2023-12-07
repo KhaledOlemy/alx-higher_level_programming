@@ -1,0 +1,51 @@
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+>>> matrix_divided([[x]], 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
+>>> matrix_divided([['x']], 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([['1']], 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1]], 1)
+[[1.0]]
+>>> matrix_divided([[1]], 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 19, in matrix_divided
+ZeroDivisionError: division by zero
+>>> matrix_divided([[1]], 'a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 17, in matrix_divided
+TypeError: div must be a number
+>>> matrix_divided([[1, 2, 3]], 'a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 17, in matrix_divided
+TypeError: div must be a number
+>>> matrix_divided([[1, 2, 3]], 5)
+[[0.2, 0.4, 0.6]]
+>>> matrix_divided([[1, 2, 3], ['a', 'b', 3]], 5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1, 'x', 'a'], [1, 7, 3]], 5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1, 'x', 'a'], [1, 7, 3]], -1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1, -4, 3], [1, 7, 3]], -1)
+[[-1.0, 4.0, -3.0], [-1.0, -7.0, -3.0]]
