@@ -24,4 +24,5 @@ class Student:
         out_dict = dict(self.__dict__)
         for key in json:
             out_dict[key] = json[key]
+        self.__dict__ = out_dict
         return out_dict
