@@ -19,5 +19,9 @@ class Student:
             for attr in attr_not_in:
                 del out_dict[attr]
         return out_dict
+
     def reload_from_json(self, json):
-        self.__dict__ = json
+        out_dict = dict(self.__dict__)
+        for key in json:
+            out_dict[key] = json[key]
+        return out_dict
