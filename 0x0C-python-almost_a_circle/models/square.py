@@ -65,3 +65,10 @@ class Square(Rectangle):
                     self.x = val
                 elif key == "y":
                     self.y = val
+
+    def to_dictionary(self):
+        """ square dict """
+        return {"id": self.id,
+                "size": self.width,
+                "x": self.x,
+                "y": self.y}
