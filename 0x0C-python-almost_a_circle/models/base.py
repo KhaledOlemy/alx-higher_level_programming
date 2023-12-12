@@ -53,3 +53,14 @@ class Base:
                 new = cls(1)
             new.update(**dictionary)
             return new
+
+    @classmethod
+    def load_from_file(cls):
+        file = cls.__name__ + ".json"
+        try:
+            with open(file, "r") as f:
+                dicts = Base.from_json_string(f.read())
+                out = [cls.create(**dict_ins) for dict_ins in dicts]
+                return out
+        except IOError:
+            return []
