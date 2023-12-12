@@ -76,3 +76,9 @@ class Rectangle(Base):
     def area(self):
         """ area calculator """
         return self.__width * self.__height
+
+    def display(self):
+        """ display a triangle """
+        for i in range(self.__height):
+            line = "#"*self.__width
+            print(line, end="\n")
