@@ -72,3 +72,7 @@ class Rectangle(Base):
         if varname in ["x", "y"]:
             if value < 0:
                 raise ValueError("{} must be >= 0".format(varname))
+
+    def area(self):
+        """ area calculator """
+        return self.__width * self.__height
