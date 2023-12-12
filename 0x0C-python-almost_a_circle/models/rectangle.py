@@ -79,9 +79,11 @@ class Rectangle(Base):
 
     def display(self):
         """ display a triangle """
+        print("\n" * self.__y, end="")
         for i in range(self.__height):
             line = "#"*self.__width
-            print(line, end="\n")
+            line = " "*self.__x + line
+            print(line)
 
     def __str__(self):
         """ rectangle str """
