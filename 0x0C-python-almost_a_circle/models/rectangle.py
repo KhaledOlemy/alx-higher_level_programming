@@ -90,3 +90,29 @@ class Rectangle(Base):
         out = "[Rectangle] ({}) {}/{} - {}/{}".\
             format(self.id, self.__x, self.__y, self.__width, self.__height)
         return out
+
+    def update(self, *args):
+        """ update rectangle """
+        net_args = [self.id, self.__width, self.__height, self.__x, self.__y]
+        if len(args) == 0:
+            pass
+        elif len(args) == 1:
+            self.id = args[0]
+        elif len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        elif len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        elif len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        else:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
