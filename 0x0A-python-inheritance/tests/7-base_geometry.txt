@@ -1,3 +1,4 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> test = BaseGeometry()
 >>> test.integer_validator("side", 0)
 Traceback (most recent call last):
