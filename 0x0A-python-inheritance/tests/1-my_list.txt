@@ -39,3 +39,12 @@ TypeError: '<' not supported between instances of 'NoneType' and 'int'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'list' object has no attribute 'print_sorted'
+>>> test = MyList()
+>>> test.append(-13)
+>>> test.append(-5)
+>>> test.append(-10)
+>>> test.print_sorted()
+[-13, -10, -5]
+>>> print(test.print_sorted())
+[-13, -10, -5]
+None
