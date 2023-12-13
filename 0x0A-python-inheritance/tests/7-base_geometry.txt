@@ -1,0 +1,44 @@
+>>> test = BaseGeometry()
+>>> test.integer_validator("side", 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 11, in integer_validator
+ValueError: side must be greater than 0
+>>> test.integer_validator("side", 14)
+>>> test.integer_validator("side", "hi")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 9, in integer_validator
+TypeError: side must be an integer
+>>> test.integer_validator("side", -100)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 11, in integer_validator
+ValueError: side must be greater than 0
+>>> test.area()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 5, in area
+Exception: area() is not implemented
+>>> test.integer_validator("width", 1)
+>>> test.integer_validator("width", -1000)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 11, in integer_validator
+ValueError: width must be greater than 0
+>>> test.integer_validator("height", 100)
+>>> test.integer_validator("height", 0.5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 9, in integer_validator
+TypeError: height must be an integer
+>>> test.integer_validator(1, 0.5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 9, in integer_validator
+TypeError: 1 must be an integer
+>>> test.integer_validator(1, 30)
+>>> test.integer_validator(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
