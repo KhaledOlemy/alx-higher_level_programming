@@ -5,5 +5,4 @@
 SELECT tv_sh.title, tv_gn.name FROM tv_shows tv_sh
 LEFT JOIN tv_show_genres tv_sh_gn ON (tv_sh.id = tv_sh_gn.show_id)
 LEFT JOIN tv_genres tv_gn ON (tv_sh_gn.genre_id = tv_gn.id)
-GROUP BY tv_gn.name
 ORDER BY tv_sh.title ASC, tv_gn.name ASC;
