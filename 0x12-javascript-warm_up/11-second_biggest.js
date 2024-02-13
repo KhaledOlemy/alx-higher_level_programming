@@ -18,5 +18,5 @@ if (len === 2 || len === 3) {
       }
     }
   }
+  console.log(secmax);
 }
-console.log(secmax);
