@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-x
+fetch state.id with certain state.name
 """
 import sys
 from model_state import Base, State
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     mainSession = sessionmaker(bind=engine)
     session = mainSession()
     ins = session.query(State).filter(State.name == sys.argv[4])
-    if ins:
+    try:
         print(ins[0].id)
-    else:
+    except IndexError:
         print("Not found")
