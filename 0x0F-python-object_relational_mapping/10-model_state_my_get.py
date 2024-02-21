@@ -13,7 +13,7 @@ if __name__ == "__main__":
     mainSession = sessionmaker(bind=engine)
     session = mainSession()
     ins = session.query(State).filter(State.name == sys.argv[4])
-    if len(ins) > 0:
+    try:
         print(ins[0].id)
-    else:
+    except IndexError:
         print("Not found")
