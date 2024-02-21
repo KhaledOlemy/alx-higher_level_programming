@@ -14,6 +14,6 @@ if __name__ == "__name__":
     session = mainSession()
     new = State(name="Louisiana")
     session.add(new)
-    session.commit()
     ins = session.query(State).filter(State.name == "Louisiana").first()
+    session.commit()
     print(ins.id)
