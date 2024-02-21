@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-
+insert
 """
 import sys
 from model_state import Base, State
@@ -15,5 +15,6 @@ if __name__ == "__name__":
     new = State(name="Louisiana")
     session.add(new)
     ins = session.query(State).filter(State.name == "Louisiana").first()
-    session.commit()
     print(ins.id)
+    session.commit()
+
