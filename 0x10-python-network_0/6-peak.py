@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 # find the peak
 def find_peak(list_of_integers):
+    """
+    find the peak:
+    args: list
+    return: peak
+    """
     if not list_of_integers:
         return None
     if len(set(list_of_integers)) == 1:
