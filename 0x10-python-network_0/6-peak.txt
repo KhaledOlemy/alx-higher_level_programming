@@ -1,2 +1,1 @@
-# Complexity of Find the Peak code
-O(nlog(n))
+O(log(n))
