@@ -1,3 +1,3 @@
 #!/bin/bash
 # get status code only
-curl -sLI olemy.tech/redirect_me | grep HTTP/ | awk '{print $2}' | tail -n1
+curl https://www.google.com --silent --output /dev/null --write-out "%{http_code}"
