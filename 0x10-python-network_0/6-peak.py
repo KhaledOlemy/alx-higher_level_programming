@@ -1,37 +1,25 @@
 #!/usr/bin/python3
-""" find the peak"""
+""" find the peak function """
 
 
 def find_peak(list_of_integers):
     """
-    find the peak:
-    args: list
-    return: peak
+    find_peak: find the peak of the list
+    input: list
+    return: int
     """
     if not list_of_integers:
         return None
-    if len(set(list_of_integers)) == 1:
+    if max(list_of_integers) == min(list_of_integers):
         return list_of_integers[0]
-    old_peak = list_of_integers[0]
-    peak = list_of_integers[0]
-    ascending = None
-    descending = None
-    for i in range(len(list_of_integers)):
-        for j in range(i, len(list_of_integers)):
-            if j == len(list_of_integers):
-                return peak
-            if list_of_integers[j+1] > list_of_integers[j]:
-                ascending = True
-                descending = None
-            elif list_of_integers[j+1] < list_of_integers[j] and ascending:
-                return peak
-            elif list_of_integers[j+1] < list_of_integers[j]:
-                ascending = None
-                descending = True
-            if ascending:
-                peak = list_of_integers[j+1]
-            elif descending:
-                pass
-            if list_of_integers[j+1] == list_of_integers[j]:
-                return old_peak
-    return peak
+    if len(list_of_integers) <= 2:
+        return max(list_of_integers)
+    midPoint = len(list_of_integers) // 2
+    condition_1 = list_of_integers[midPoint] >= list_of_integers[midPoint - 1]
+    condition_2 = list_of_integers[midPoint] >= list_of_integers[midPoint + 1]
+    if condition_1 and condition_2:
+        return list_of_integers[midPoint]
+    if midPoint > 0 and not condition_2:
+        return find_peak(list_of_integers[midPoint:])
+    if midPoint > 0 and not condition_1:
+        return find_peak(list_of_integers[:midPoint])
