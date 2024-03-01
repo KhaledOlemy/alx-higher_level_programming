@@ -5,4 +5,4 @@ with request.urlopen('https://alx-intranet.hbtn.io/status') as resp:
     print('Body response:')
     print('\t- type: {}'.format(type(resp)))
     print('\t- content: {}'.format(resp))
-    print('\t- utf8 content: {}'.format(resp.encode('UTF8')))
+    print('\t- utf8 content: {}'.format(resp.decode('UTF8')))
