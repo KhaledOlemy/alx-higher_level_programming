@@ -10,4 +10,4 @@ if __name__ == "__main__":
     if resp.status_code < 400:
         print(resp.text)
     else:
-        print("Error code: {resp.status_code}")
+        print(f"Error code: {resp.status_code}")
