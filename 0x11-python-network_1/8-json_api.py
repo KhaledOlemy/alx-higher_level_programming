@@ -15,8 +15,12 @@ if __name__ == "__main__":
     headers = {
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
     }
-    resp = requests.post(url, data=data, headers=headers)
-    if resp.json():
-        print(f"[{resp.json().get('id')}] {resp.json().get('name')}")
-    else:
-        print("No result")
+    try:
+        resp = requests.post(url, data=data, headers=headers)
+        if resp.json():
+            print(f"[{resp.json().get('id')}] {resp.json().get('name')}")
+        else:
+            print("No result")
+    except:
+        print("Not a valid JSON")
+
