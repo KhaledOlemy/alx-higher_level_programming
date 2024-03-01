@@ -6,7 +6,7 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    resp = requests.get(sys.argv[1], allow_redirects=False)
+    resp = requests.get(sys.argv[1])
     if resp.status_code == 200:
         print(resp.text)
     else:
