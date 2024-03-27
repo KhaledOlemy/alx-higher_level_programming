@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const request = require('request');
 let reqUrl = process.argv[2];
-if (!reqUrl.endsWith('/'))
+if (reqUrl !== 'https://swapi-api.alx-tools.com/api/films/')
 {
-  reqUrl += '/'
+  return;
 }
 function getSuccess(movie) {
   return movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/');
