@@ -8,6 +8,6 @@ request(reqUrl, function (n0, n1, body) {
     request(element, function (n0, n1, cBody) {
       const aName = JSON.parse(cBody).name;
       console.log(aName);
-    })
+    });
   });
 });
