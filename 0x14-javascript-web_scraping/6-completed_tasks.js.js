@@ -15,4 +15,6 @@ request(reqUrl, function (n0, n1, body) {
     }
   }
   console.log(completedTasks);
+  // const count = moviesList.filter(getSuccess).length;
+  // console.log(count);
 });
