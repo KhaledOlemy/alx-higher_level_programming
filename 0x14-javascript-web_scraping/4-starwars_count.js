@@ -2,7 +2,15 @@
 const request = require('request');
 const reqUrl = process.argv[2];
 function getSuccess (movie) {
-  return movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/');
+  let tempCount = 0;
+  let tempCharacters = movie.characters;
+  for (let j = 0; j <tempCharacters.length; j++) {
+    if (tempCharacters[j].includes('18')) {
+      tempCount += 1;
+    }
+  }
+  return tempCount;
+
 }
 request(reqUrl, function (n0, n1, body) {
   const moviesList = JSON.parse(body).results;
